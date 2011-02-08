@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>WebService</title>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+html, body { margin: 0; padding: 0; }
+body { color: #000; background-color: white; font-family: Verdana; }
+#container { font-size: .70em; padding-bottom: 2em; }
+#content { padding: 0 0 0 30px; }
+a { text-decoration: underline; font-weight: bold; }
+a:link { color: #336699; }
+a:visited { color: #6699cc; }
+a:active { color: #336699; }
+a:hover { color: cc3300; }
+p { color: #000; margin-top: 0px; margin-bottom: 12px; font-family: Verdana; }
+pre { background-color: #e5e5cc; padding: 5px; font-family: Monaco, 'Courier New'; font-size: 11px; margin-top: -5px; border: 1px #f0f0e0 solid; }
+h2 { font-size: 1.5em; font-weight: bold; margin: 25px 0 10px -15px; padding-top: 10px; border-top: 1px solid #003366; color: #003366; }
+h3 { font-size: 1.1em; color: #000; margin: 10px 0 10px -15px: }
+ul { margin-top: 20px; margin-left: 20px; }
+li { margin-top: 10px; color: #000; }
+span.value { color: darkblue; font: bold; }
+span.key { color: darkgreen; font: bold; }
+span.error { color: darkred; font: bold; }
+h1.head { color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal; background-color: #2F2F2F; margin: 0 0 15px 0; padding: 10px 0 5px 15px; }
+.intro { margin-left: -15px; }
+    </style>
+</head>
+	<body>
+		<div id="container">
+			<h1 class="head">WebService</h1>
+			<div id="content">
+				<!-- definitions -->
+				<p class="intro">The following operations are supported. For more information, please see the <a href="#wsdl#">Web Service Definition</a>.</p>
+				<ul>
+					<!-- definition -->
+					<li>
+						<a href="#service#?op=#operation#">#operation#</a>
+		                <div>
+		                #documentation#
+		                </div>
+	                </li>
+	            	<!-- /definition -->
+				</ul>
+				<!-- /definitions -->
+				
+				<!-- operation -->		
+				<p class="intro">Click <a href="#service#">here</a> for a complete list of operations.</p>
+				<h2>#operation#</h2>
+				<p class="intro">#documentation#</p>
+				<h3>SOAP</h3>
+				<p>The following is a sample SOAP request and response.  The <span class="value"">placeholders</span> shown need to be replaced with actual values.</p>
+				<pre>#request#</pre>
+				<pre>#response#</pre>
+				<!-- /operation -->
+			</div>
+		</div>
+  </body>
+</html>

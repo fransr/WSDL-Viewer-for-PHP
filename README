@@ -1,0 +1,56 @@
+/**
+ * WSDL Viewer for PHP v1.0
+ * 
+ * Used to get a visible overview of a WSDL service. The class will also send test requests built up according to the spec.
+ * To visualize it, you can use a template with three tags to specify what should be the output:
+ * <!-- definitions --> HTML here! <!-- /definitions --> 		To specify the definition list.
+ * <!-- definition --> HTML here! <!-- /definition -->			To specify the single definition of an operation inside the definition list.
+ * <!-- operation --> HTML here! <!-- /operation -->			To specify how the page of a single operation looks like.
+ * 
+ * You also have a few tags inside these pages:
+ * 
+ * On all pages:
+ * 		#wsdl#				Link to the WSDL
+ * 		#service#			PHP_SELF
+ * 
+ * Inside a definition:
+ * 		#operation#			The operation name
+ * 		#documentation#		The information from the documentation tag
+ *	
+ * Inside an operation:
+ * 		#operation#			Same as per above.
+ * 		#documentation#		Same as per above.
+ * 		#request#			A test request built up from the WSDL.
+ * 		#response#			A response from the service.
+ * 
+ * 
+ * If you are using you own Web Service there are a few calls you could make before the preview of the request/response.
+ * Auth
+ * 		If you need to authorize with a command before you try it, you could specify this like this:
+ * 		$wsdlviewer->auth(true, 'connect', array('username' => 'username', 'password' => 'password'));
+ * 
+ * Demo Mode
+ * 		If your server supports putting all requests to demo mode (just making a response back), you could specify this aswell:
+ * 		$wsdlviewer->demo(true, 'demo');
+ * 
+ * Example:
+ * 1. Specify file, template and namespace (the targetNamespace, used for s:string / s:int etc) in the construct by WSDLViewer(array('settings' => array('file' => ..)).
+ * 2. Specify functions to initiate demo/auth modes.
+ * 3. Execute with ->output()
+ * 
+ * Missing features: 
+ * Doesn't handle enum-restrictions.
+ * Doesn't handle inline authorization nor SOAP-Header auth.
+ * 
+ * Disclaimer: The idea of this came up while integrating to E-Conomic (e-conomic.com) since they have a pretty neat documentation of their service,
+ * probably using some .NET module for generating it:
+ * https://www.e-conomic.com/secure/api1/EconomicWebservice.asmx
+ * For the test template the look is pretty much like theirs.
+ * 
+ * LICENSE: License is granted to use or modify this software
+ * ("WSDL Viewer for PHP") for commercial or non-commercial use provided the
+ * copyright of the author is preserved in any distributed or derivative work.
+ * 
+ * @category   Web Services
+ * @author     Frans Rosén <frans@youngskilled.com>
+ */
